@@ -1,0 +1,15 @@
+import React from 'react'
+import propTypes from 'prop-types'
+const RepoItem = ({ repo }) => {
+    return (
+        <div>
+            {repo.name}
+        </div>
+    )
+}
+
+RepoItem.propTypes = {
+    repo: propTypes.object.isRequired
+}
+
+export default RepoItem;
