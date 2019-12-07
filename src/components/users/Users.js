@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import UserItem from "./UserItem";
-import propTypes from "prop-types";
+// import propTypes from "prop-types";
 import Spinner from "../layout/Spinner";
-
-const Users = ({ users, loading }) => {
+import githubContext from '../../context/github/githubContext';
+const Users = () => {
+  const gitContext = useContext(githubContext);
+  const { users, loading } = gitContext
   return (
     <div style={userStyle}>
       {loading ? (
@@ -20,8 +22,8 @@ const userStyle = {
   gridTemplateColumns: "repeat(3, 1fr)",
   gridGap: "1rem"
 };
-Users.propTypes = {
-  users: propTypes.array.isRequired,
-  loading: propTypes.bool.isRequired
-};
+// Users.propTypes = {
+//   users: propTypes.array.isRequired,
+//   loading: propTypes.bool.isRequired
+// };
 export default Users;
