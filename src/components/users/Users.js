@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import UserItem from "./UserItem";
 import propTypes from "prop-types";
 import Spinner from "../layout/Spinner";
@@ -9,8 +9,8 @@ const Users = ({ users, loading }) => {
       {loading ? (
         <Spinner />
       ) : (
-        users.map(user => <UserItem user={user} key={user.id} />)
-      )}
+          users.map(user => <UserItem user={user} key={user.id} />)
+        )}
     </div>
   );
 };
