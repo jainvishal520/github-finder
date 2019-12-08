@@ -25,7 +25,6 @@ const User = ({ match }) => {
             }
 
             <Repos />
-
         </div>
     )
 }
